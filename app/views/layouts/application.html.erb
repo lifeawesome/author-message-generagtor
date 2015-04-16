@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Newsletter</title>
+<%= stylesheet_link_tag "/webfonts/ss-symbolicons-line.css" %>
+<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+<%= csrf_meta_tags %>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,700,400' rel='stylesheet' type='text/css'>
+</head>
+<body>
+  <nav id="sidenav">
+    <%= image_tag "ps-hex-logo.png", id:'logo' %>
+    <%= link_to "mail", mailings_path, :class => "ss-icon" %>
+    <%= link_to "robot", mailings_path, :class => "ss-icon inactive" %>
+    <%= link_to "car", mailings_path, :class => "ss-icon inactive" %>
+    <%= link_to "calendar", mailings_path, :class => "ss-icon inactive" %>
+    <%= link_to "wrench", mailings_path, :class => "ss-icon inactive" %>
+  </nav>
+
+  <nav id="subnav">
+    <h1>Newsletters</h1>
+    <%= link_to "+ New", new_mailing_path %>
+    <%= link_to "View All", mailings_path %>
+  </nav>
+
+  <div id="content">
+    <%= render 'shared/notice' %>
+    <%= yield %>
+  </div>
+
+  <%= javascript_include_tag "/webfonts/ss-symbolicons-line.js" %>
+
+</body>
+</html>

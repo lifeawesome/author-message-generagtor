@@ -1,0 +1,796 @@
+<%= form_for @mailing, :html => { :multipart => true, :id => "fileupload"  } do |f| %>
+  <% if @mailing.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@mailing.errors.count, "error") %> prohibited this mailing from being saved:</h2>
+
+      <ul>
+      <% @mailing.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :subject %><br>
+    <%= f.text_field :subject, :size => "100" %>
+  </div>
+  <div class="field">
+    <%= f.label :month %><br>
+    <%= f.text_field :month %>
+  </div>
+
+  <hr>
+
+  <div class="field">
+    <%= f.label :utm_source %><br>
+    <%= f.text_field :utm_source %>
+  </div>
+  <div class="field">
+    <%= f.label :utm_medium %><br>
+    <%= f.text_field :utm_medium %>
+  </div>
+  <div class="field">
+    <%= f.label :utm_campaign %><br>
+    <%= f.text_field :utm_campaign %>
+  </div>
+
+  <hr>
+
+
+
+  <div class="field" style="display: none;">
+    <%= f.label :hero_utm_medium %><br>
+    <%= f.text_field :hero_utm_medium %>
+  </div>
+  <div class="field">
+    <%= f.label :hero_title %><br>
+    <%= f.text_field :hero_title, :size => "100" %>
+  </div>
+  <div class="field">
+    <%= f.label :hero_url %><br>
+    <%= f.text_field :hero_url, :size => "100" %>
+  </div>
+  <div class="field">
+    <%= f.label :hero_description %><br>
+    <%= f.text_area :hero_description, :size => "100x3" %>
+  </div>
+  <div class="field">
+    <%= f.label :hero_image_url %><br>
+    <%= f.text_field :hero_image_url, :size => "100" %>
+  </div>
+
+  <hr>
+
+
+  <h1>Courses</h1>
+
+<div style="display: none;">
+  <div class="field">
+    <%= f.label :course_utm_medium %><br>
+    <%= f.text_field :course_utm_medium %>
+  </div>
+
+  <hr>
+
+</div>
+
+  <h2>Course #1</h2>
+
+
+  <div class="field">
+    <%= f.label :course_one_title, "Title" %><br>
+    <%= f.text_field :course_one_title, :size => "100" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :course_one_description, "Description" %><br>
+    <%= f.text_area :course_one_description, :size => "100x3" %>
+  </div>
+  
+  <div class="field">
+    <%= f.label :course_one_url, "URL" %><br>
+    <%= f.text_field :course_one_url, :size => "100" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :course_one_author, "Author" %><br>
+    <%= f.text_field :course_one_author, :size => "100" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :course_one_image, "Image URL" %><br>
+    <%= f.text_field :course_one_image, :size => "100" %>
+  </div>
+
+
+
+
+  <h2>Course #2</h2>
+
+  <div class="field">
+    <%= f.label :course_two_title, "Title" %><br>
+    <%= f.text_field :course_two_title, :size => "100" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :course_two_description, "Description" %><br>
+    <%= f.text_area :course_two_description, :size => "100x3" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :course_two_url, "URL" %><br>
+    <%= f.text_field :course_two_url, :size => "100" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :course_two_author, "Author" %><br>
+    <%= f.text_field :course_two_author, :size => "100" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :course_two_image, "Image URL" %><br>
+    <%= f.text_field :course_two_image, :size => "100" %>
+  </div>
+
+
+
+
+  <h2>Course #3</h2>
+
+  <div class="field">
+    <%= f.label :course_three_title, "Title" %><br>
+    <%= f.text_field :course_three_title, :size => "100" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :course_three_description, "Description" %><br>
+    <%= f.text_area :course_three_description, :size => "100x3" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :course_three_url, "URL" %><br>
+    <%= f.text_field :course_three_url, :size => "100" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :course_three_author, "Author" %><br>
+    <%= f.text_field :course_three_author, :size => "100" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :course_three_image, "Image URL" %><br>
+    <%= f.text_field :course_three_image, :size => "100" %>
+  </div>
+
+
+
+
+  <h2>Course #4</h2>
+
+  <div class="field">
+    <%= f.label :course_four_title, "Title" %><br>
+    <%= f.text_field :course_four_title, :size => "100" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :course_four_description, "Description" %><br>
+    <%= f.text_area :course_four_description, :size => "100x3" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :course_four_url, "URL" %><br>
+    <%= f.text_field :course_four_url, :size => "100" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :course_four_author, "Author" %><br>
+    <%= f.text_field :course_four_author, :size => "100" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :course_four_image, "Image URL" %><br>
+    <%= f.text_field :course_four_image, :size => "100" %>
+  </div>
+
+
+
+
+  <h2>Course #5</h2>
+
+  <div class="field">
+    <%= f.label :course_five_title, "Title" %><br>
+    <%= f.text_field :course_five_title, :size => "100" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :course_five_description, "Description" %><br>
+    <%= f.text_area :course_five_description, :size => "100x3" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :course_five_url, "URL" %><br>
+    <%= f.text_field :course_five_url, :size => "100" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :course_five_author, "Author" %><br>
+    <%= f.text_field :course_five_author, :size => "100" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :course_five_image, "Image URL" %><br>
+    <%= f.text_field :course_five_image, :size => "100" %>
+  </div>
+
+
+
+
+  <h2>Course #6</h2>
+
+  <div class="field">
+    <%= f.label :course_six_title, "Title" %><br>
+    <%= f.text_field :course_six_title, :size => "100" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :course_six_description, "Description" %><br>
+    <%= f.text_area :course_six_description, :size => "100x3" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :course_six_url, "URL" %><br>
+    <%= f.text_field :course_six_url, :size => "100" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :course_six_author, "Author" %><br>
+    <%= f.text_field :course_six_author, :size => "100" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :course_six_image, "Image URL" %><br>
+    <%= f.text_field :course_six_image, :size => "100" %>
+  </div>
+
+
+
+
+
+
+ <hr>
+
+<h2></h2>
+
+
+
+
+
+
+
+
+
+
+
+<h1>Upcoming Courses</h1>
+
+
+  <div class="field">
+    <%= f.label :upcoming_one %><br>
+    <%= f.text_field :upcoming_one, :size => "100" %>
+  </div>
+  <div class="field">
+    <%= f.label :upcoming_two %><br>
+    <%= f.text_field :upcoming_two, :size => "100" %>
+  </div>
+  <div class="field">
+    <%= f.label :upcoming_three %><br>
+    <%= f.text_field :upcoming_three, :size => "100" %>
+  </div>
+  <div class="field">
+    <%= f.label :upcoming_four %><br>
+    <%= f.text_field :upcoming_four, :size => "100" %>
+  </div>
+
+<hr>
+
+<h1>New Courses</h1>
+
+<table>
+  <tr>
+    <td>
+
+  <div class="field">
+    <%= f.label :popular_one, "#1"%><br>
+    <%= f.text_field :popular_one, :size => "100" %>
+  </div>
+
+    </td>
+    <td>
+
+  <div class="field">
+    <%= f.label :popular_url_one, "URL" %><br>
+    <%= f.text_field :popular_url_one, :size => "100" %>
+  </div>
+    </td>
+  </tr>
+</table>
+
+<table>
+  <tr>
+    <td>
+  <div class="field">
+    <%= f.label :popular_two, "#2" %><br>
+    <%= f.text_field :popular_two, :size => "100" %>
+  </div>
+
+    </td>
+    <td>
+
+  <div class="field">
+    <%= f.label :popular_url_two, "URL" %><br>
+    <%= f.text_field :popular_url_two, :size => "100" %>
+  </div>
+    </td>
+  </tr>
+</table>
+
+<table>
+  <tr>
+    <td>
+  <div class="field">
+    <%= f.label :popular_three, "#3" %><br>
+    <%= f.text_field :popular_three, :size => "100" %>
+  </div>
+
+    </td>
+    <td>
+
+  <div class="field">
+    <%= f.label :popular_url_three, "URL" %><br>
+    <%= f.text_field :popular_url_three, :size => "100" %>
+  </div>
+    </td>
+  </tr>
+</table>
+
+<table>
+  <tr>
+    <td>
+  <div class="field">
+    <%= f.label :popular_four, "#4" %><br>
+    <%= f.text_field :popular_four, :size => "100" %>
+  </div>
+
+    </td>
+    <td>
+
+  <div class="field">
+    <%= f.label :popular_url_four, "URL" %><br>
+    <%= f.text_field :popular_url_four, :size => "100" %>
+  </div>
+    </td>
+  </tr>
+</table>
+
+<table>
+  <tr>
+    <td>
+  <div class="field">
+    <%= f.label :popular_five, "#5" %><br>
+    <%= f.text_field :popular_five, :size => "100" %>
+  </div>
+
+    </td>
+    <td>
+
+  <div class="field">
+    <%= f.label :popular_url_five, "URL" %><br>
+    <%= f.text_field :popular_url_five, :size => "100" %>
+  </div>
+    </td>
+  </tr>
+</table>
+
+<table>
+  <tr>
+    <td>
+  <div class="field">
+    <%= f.label :popular_six, "#6" %><br>
+    <%= f.text_field :popular_six, :size => "100" %>
+  </div>
+
+    </td>
+    <td>
+
+  <div class="field">
+    <%= f.label :popular_url_six, "URL" %><br>
+    <%= f.text_field :popular_url_six, :size => "100" %>
+  </div>
+    </td>
+  </tr>
+</table>
+
+<table>
+  <tr>
+    <td>
+  <div class="field">
+    <%= f.label :popular_seven, "#7" %><br>
+    <%= f.text_field :popular_seven, :size => "100" %>
+  </div>
+
+    </td>
+    <td>
+
+  <div class="field">
+    <%= f.label :popular_url_seven, "URL" %><br>
+    <%= f.text_field :popular_url_seven, :size => "100" %>
+  </div>
+    </td>
+  </tr>
+</table>
+
+<table>
+  <tr>
+    <td>
+  <div class="field">
+    <%= f.label :popular_eight, "#8" %><br>
+    <%= f.text_field :popular_eight, :size => "100" %>
+  </div>
+
+    </td>
+    <td>
+
+  <div class="field">
+    <%= f.label :popular_url_eight, "URL" %><br>
+    <%= f.text_field :popular_url_eight, :size => "100" %>
+  </div>
+    </td>
+  </tr>
+</table>
+
+<table>
+  <tr>
+    <td>
+  <div class="field">
+    <%= f.label :popular_nine, "#9" %><br>
+    <%= f.text_field :popular_nine, :size => "100" %>
+  </div>
+
+    </td>
+    <td>
+
+  <div class="field">
+    <%= f.label :popular_url_nine, "URL" %><br>
+    <%= f.text_field :popular_url_nine, :size => "100" %>
+  </div>
+    </td>
+  </tr>
+</table>
+
+<table>
+  <tr>
+    <td>
+  <div class="field">
+    <%= f.label :popular_ten, "#10" %><br>
+    <%= f.text_field :popular_ten, :size => "100" %>
+  </div>
+
+    </td>
+    <td>
+
+  <div class="field">
+    <%= f.label :popular_url_ten, "URL" %><br>
+    <%= f.text_field :popular_url_ten, :size => "100" %>
+  </div>
+    </td>
+  </tr>
+</table>
+
+<table>
+  <tr>
+    <td>
+  <div class="field">
+    <%= f.label :popular_eleven, "#11" %><br>
+    <%= f.text_field :popular_eleven, :size => "100" %>
+  </div>
+
+    </td>
+    <td>
+
+  <div class="field">
+    <%= f.label :popular_url_eleven, "URL" %><br>
+    <%= f.text_field :popular_url_eleven, :size => "100" %>
+  </div>
+    </td>
+  </tr>
+</table>
+
+<table>
+  <tr>
+    <td>
+  <div class="field">
+    <%= f.label :popular_twelve, "#12" %><br>
+    <%= f.text_field :popular_twelve, :size => "100" %>
+  </div>
+
+    </td>
+    <td>
+
+  <div class="field">
+    <%= f.label :popular_url_twelve, "URL" %><br>
+    <%= f.text_field :popular_url_twelve, :size => "100" %>
+  </div>
+    </td>
+  </tr>
+</table>
+
+<table>
+  <tr>
+    <td>
+  <div class="field">
+    <%= f.label :popular_thirteen, "#13" %><br>
+    <%= f.text_field :popular_thirteen, :size => "100" %>
+  </div>
+
+    </td>
+    <td>
+
+  <div class="field">
+    <%= f.label :popular_url_thirteen, "URL" %><br>
+    <%= f.text_field :popular_url_thirteen, :size => "100" %>
+  </div>
+    </td>
+  </tr>
+</table>
+
+<table>
+  <tr>
+    <td>
+  <div class="field">
+    <%= f.label :popular_fourteen, "#14" %><br>
+    <%= f.text_field :popular_fourteen, :size => "100" %>
+  </div>
+
+    </td>
+    <td>
+
+  <div class="field">
+    <%= f.label :popular_url_fourteen, "URL" %><br>
+    <%= f.text_field :popular_url_fourteen, :size => "100" %>
+  </div>
+    </td>
+  </tr>
+</table>
+
+<table>
+  <tr>
+    <td>
+  <div class="field">
+    <%= f.label :popular_fifteen, "#15" %><br>
+    <%= f.text_field :popular_fifteen, :size => "100" %>
+  </div>
+
+    </td>
+    <td>
+
+  <div class="field">
+    <%= f.label :popular_url_fifteen, "URL" %><br>
+    <%= f.text_field :popular_url_fifteen, :size => "100" %>
+  </div>
+    </td>
+  </tr>
+</table>
+
+<table>
+  <tr>
+    <td>
+  <div class="field">
+    <%= f.label :popular_sixteen, "#16" %><br>
+    <%= f.text_field :popular_sixteen, :size => "100" %>
+  </div>
+
+    </td>
+    <td>
+
+  <div class="field">
+    <%= f.label :popular_url_sixteen, "URL" %><br>
+    <%= f.text_field :popular_url_sixteen, :size => "100" %>
+  </div>
+    </td>
+  </tr>
+</table>
+
+<table>
+  <tr>
+    <td>
+  <div class="field">
+    <%= f.label :popular_seventeen, "#17" %><br>
+    <%= f.text_field :popular_seventeen, :size => "100" %>
+  </div>
+
+    </td>
+    <td>
+
+  <div class="field">
+    <%= f.label :popular_url_seventeen, "URL" %><br>
+    <%= f.text_field :popular_url_seventeen, :size => "100" %>
+  </div>
+    </td>
+  </tr>
+</table>
+
+<table>
+  <tr>
+    <td>
+  <div class="field">
+    <%= f.label :popular_eighteen, "#18" %><br>
+    <%= f.text_field :popular_eighteen, :size => "100" %>
+  </div>
+
+    </td>
+    <td>
+
+  <div class="field">
+    <%= f.label :popular_url_eighteen, "URL" %><br>
+    <%= f.text_field :popular_url_eighteen, :size => "100" %>
+  </div>
+    </td>
+  </tr>
+</table>
+
+
+<table>
+  <tr>
+    <td>
+  <div class="field">
+    <%= f.label :popular_nineteen, "#19" %><br>
+    <%= f.text_field :popular_nineteen, :size => "100" %>
+  </div>
+
+    </td>
+    <td>
+
+  <div class="field">
+    <%= f.label :popular_url_nineteen, "URL" %><br>
+    <%= f.text_field :popular_url_nineteen, :size => "100" %>
+  </div>
+    </td>
+  </tr>
+</table>
+
+
+<table>
+  <tr>
+    <td>
+  <div class="field">
+    <%= f.label :popular_twenty, "#20" %><br>
+    <%= f.text_field :popular_twenty, :size => "100" %>
+  </div>
+
+    </td>
+    <td>
+
+  <div class="field">
+    <%= f.label :popular_url_twenty, "URL" %><br>
+    <%= f.text_field :popular_url_twenty, :size => "100" %>
+  </div>
+    </td>
+  </tr>
+</table>
+
+
+<table>
+  <tr>
+    <td>
+  <div class="field">
+    <%= f.label :popular_twentyone, "#21" %><br>
+    <%= f.text_field :popular_twentyone, :size => "100" %>
+  </div>
+
+    </td>
+    <td>
+
+  <div class="field">
+    <%= f.label :popular_url_twentyone, "URL" %><br>
+    <%= f.text_field :popular_url_twentyone, :size => "100" %>
+  </div>
+    </td>
+  </tr>
+</table>
+
+
+
+<table>
+  <tr>
+    <td>
+  <div class="field">
+    <%= f.label :popular_twentytwo, "#22" %><br>
+    <%= f.text_field :popular_twentytwo, :size => "100" %>
+  </div>
+
+    </td>
+    <td>
+
+  <div class="field">
+    <%= f.label :popular_url_twentytwo, "URL" %><br>
+    <%= f.text_field :popular_url_twentytwo, :size => "100" %>
+  </div>
+    </td>
+  </tr>
+</table>
+
+
+<table>
+  <tr>
+    <td>
+  <div class="field">
+    <%= f.label :popular_twentytwo, "#22" %><br>
+    <%= f.text_field :popular_twentytwo, :size => "100" %>
+  </div>
+
+    </td>
+    <td>
+
+  <div class="field">
+    <%= f.label :popular_url_twentytwo, "URL" %><br>
+    <%= f.text_field :popular_url_twentytwo, :size => "100" %>
+  </div>
+    </td>
+  </tr>
+</table>
+
+
+
+<table>
+  <tr>
+    <td>
+  <div class="field">
+    <%= f.label :popular_twentythree, "#23" %><br>
+    <%= f.text_field :popular_twentythree, :size => "100" %>
+  </div>
+
+    </td>
+    <td>
+
+  <div class="field">
+    <%= f.label :popular_url_twentythree, "URL" %><br>
+    <%= f.text_field :popular_url_twentythree, :size => "100" %>
+  </div>
+    </td>
+  </tr>
+</table>
+
+
+<table>
+  <tr>
+    <td>
+  <div class="field">
+    <%= f.label :popular_twentyfour, "#24" %><br>
+    <%= f.text_field :popular_twentyfour, :size => "100" %>
+  </div>
+
+    </td>
+    <td>
+
+  <div class="field">
+    <%= f.label :popular_url_twentyfour, "URL" %><br>
+    <%= f.text_field :popular_url_twentyfour, :size => "100" %>
+  </div>
+    </td>
+  </tr>
+</table>
+
+
+
+
+
+
+
+  
+  
+  
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

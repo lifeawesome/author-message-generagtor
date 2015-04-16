@@ -1,0 +1,26 @@
+<h1>All Newsletters</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Subject</th>
+      <th>Delivery Date</th>
+      <th colspan="5"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @mailings.each do |mailing| %>
+      <tr class="<%= cycle('odd', 'even') %>">
+        <td><%= mailing.subject %></td>
+        <td><%= mailing.month %></td>
+        <td><%= link_to 'Edit', edit_mailing_path(mailing) %></td>
+        <td><%= link_to 'Preview', mailing %></td>
+	      <td><%= link_to 'Copy HTML', generate_mailing_path(mailing) %></td>
+        <td><%= link_to 'Copy Text', "mailings/"+mailing.id.to_s+".text" %></td>
+        <td><%= link_to 'Destroy', mailing, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+

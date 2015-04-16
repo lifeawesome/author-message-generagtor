@@ -1,0 +1,120 @@
+Pluralsight Newsletter
+************************************************
+http://www.pluralsight.com/?utm_source=<%= @mailing.utm_source %>&utm_medium=email&utm_campaign=<%= @mailing.utm_campaign %>&utm_content=logo
+
+
+
+************************************************
+<%= @mailing.hero_title %>
+************************************************
+ <%= @mailing.hero_description %>
+
+( <%= @mailing.hero_url %> )
+
+
+
+Featured courses
+************************************************
+
+<%= @mailing.course_one_title %> 
+By <%= @mailing.course_one_author %> - 
+------------------------------------------------
+<%= @mailing.course_one_url %>
+
+<%= @mailing.course_one_description %>
+
+******
+
+<%= @mailing.course_two_title %> 
+By <%= @mailing.course_two_author %> - 
+------------------------------------------------
+<%= @mailing.course_two_url %>
+
+<%= @mailing.course_two_description %>
+
+******
+
+<%= @mailing.course_three_title %> 
+By <%= @mailing.course_three_author %> - 
+------------------------------------------------
+<%= @mailing.course_three_url %>
+
+<%= @mailing.course_three_description %>
+
+******
+
+<%= @mailing.course_four_title %> 
+By <%= @mailing.course_four_author %> - 
+------------------------------------------------
+<%= @mailing.course_four_url %>
+
+<%= @mailing.course_four_description %>
+
+******
+
+<%= @mailing.course_five_title %> 
+By <%= @mailing.course_five_author %> - 
+------------------------------------------------
+<%= @mailing.course_five_url %>
+
+<%= @mailing.course_five_description %>
+
+******
+
+<%= @mailing.course_six_title %> 
+By <%= @mailing.course_six_author %> - 
+------------------------------------------------
+<%= @mailing.course_six_url %>
+
+<%= @mailing.course_six_description %>
+
+
+
+<% if !@popular_courses.blank? %>
+All new courses
+************************************************
+<% end %>
+
+<% @popular_courses.each do |course| %>
+  <% course.each do |c| %>
+    <% if c['name'] != nil %>
+<%= c['name'] %> by <%= c['author'] %>
+    [ <%=c['url']%> ]
+
+    <% end %>
+  <% end %>
+<% end %>
+
+
+
+Upcoming courses
+************************************************
+
+<% @upcoming_courses.each do |course| %>
+  <% logger.debug course %>
+  <% course.each do |c| %>
+    <% if c['name'] != nil %>
+<%= c['name'] %> by <%= c['author'] %>
+    <% end %>
+  <% end %>
+<% end %>
+
+
+
+Manage your email preferences: %%email_preference_center%%
+
+Pluralsight
+182 N. Union Ave. Farmington, UT 84025
+
+Facebook:  https://www.facebook.com/pluralsight
+Twitter:   https://twitter.com/pluralsight
+Youtube:   https://www.youtube.com/user/pluralsight
+Instagram: http://instagram.com/pluralsight
+LinkedIn:  https://www.linkedin.com/company/pluralsight
+
+Copyright © <%= Time.now.strftime("%Y") -%> Pluralsight LLC.
+All logos and trademarks are the properties of their respective owners.
+
+<%= Time.now.strftime("%B %Y") -%>
+View web version: %%view_online%%
+

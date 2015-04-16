@@ -1,0 +1,68 @@
+Weekly Newsletter Fields
+
+Subject:   					%%subject%%
+Delivery date				%%date%%
+
+
+UTM Source:  				%%utm_source%%
+UTM Medium:  				%%utm_medium%%
+UTM Campaign:				%%utm_campaign%%
+
+Hero UTM medium:			%%hero_utm_medium%%
+Hero Title:					%%hero_title%%
+Hero URL:					%%hero_url%%
+Hero Description:			%%hero_description%% 
+Hero Image URL:				%%hero_image_url%%
+
+Course UTM medium:  		%%course_utm_medium%%
+
+Course One Title:			%%course_one_title%%
+Course Two Title:			%%course_two_title%%
+Course Three Title:			%%course_three_title%%
+Course four Title:			%%course_four_title%%
+Course Five Title:			%%course_five_title%%
+Course Six Title:			%%course_six_title%%
+
+Course One Description:		%%course_one_description%%
+Course Two Description:		%%course_two_description%%
+Course Three Description:	%%course_three_description%%
+Course four Description:	%%course_four_description%%
+Course Five Description:	%%course_five_description%%
+Course Six Description:		%%course_six_description%%
+
+Course One URL:				%%course_one_url%%
+Course Two URL:				%%course_two_url%%
+Course Three URL:			%%course_three_url%%
+Course four URL:			%%course_four_url%%
+Course Five URL:			%%course_five_url%%
+Course Six URL:				%%course_six_url%%
+
+Course One Author:			%%course_one_author%%
+Course Two Author:			%%course_two_author%%
+Course Three Author:		%%course_three_author%%
+Course four Author:			%%course_four_author%%
+Course Five Author:			%%course_five_author%%
+Course Six Author:			%%course_six_author%%
+
+Course One Image:			%%course_one_image%%
+Course Two Image:			%%course_two_image%%
+Course Three Image:			%%course_three_image%%
+Course four Image:			%%course_four_image%%
+Course Five Image:			%%course_five_image%%
+Course Six Image:			%%course_six_image%%
+
+Upcoming Courses One:		%%upcoming_one%%
+Upcoming Courses Two:		%%upcoming_two%%
+Upcoming Courses Three:		%%upcoming_three%%
+Upcoming Courses Four:		%%upcoming_four%%
+
+Popular Coures One:			%%popular_one%%
+Popular Coures Two:			%%popular_two%%
+Popular Coures Three:		%%popular_three%%
+Popular Coures Four:		%%popular_four%%
+
+Popular One URL:			%%popular_url_one%%
+Popular Two URL:			%%popular_url_two%%
+Popular Three URL:			%%popular_url_three%%
+Popular Four URL:			%%popular_url_four%%
+

@@ -1,0 +1,496 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns="http://www.w3.org/1999/xhtml" style="box-sizing: border-box; font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; font-size: 14px; margin: 0; padding: 0">
+<head>
+<meta name="viewport" content="width=device-width" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<title><%= @mailing.subject %></title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/zurb-ink/1.0.5/ink.min.css">
+
+<style type="text/css">
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:100,400,600);
+</style>
+
+<!-- <link rel="stylesheet" href="css/weekly-newsletter.css"> -->
+<link rel="stylesheet" href="http://pluralsight-assets.s3.amazonaws.com/newsletter/css/weekly-newsletter.css">
+
+</head>
+
+<body bgcolor="#ffffff">
+
+<table class="body">
+  <tr>
+    <td class="center" align="center" valign="top">
+      <center>
+
+        <table class="header" width="100%"  bgcolor="#f15f22">
+          <tr>
+            <td class="center" align="center">
+              <center>
+
+                <table class="container">
+                  <tr>
+                    <td>
+
+                      <table class="logo-container" width="165">
+                        <tr>
+                          <td class="text-pad-left">
+                            <a href="http://www.pluralsight.com/?utm_source=<%= @mailing.utm_source %>&utm_medium=email&utm_campaign=<%= @mailing.utm_campaign %>"><img class="logo" src="http://ww2.pluralsight.com/l/36882/2014-08-06/vcvm/36882/32808/ps_logo_large.gif" hspace="20" vspace="20" width="165" height="33" style="max-width: 165px !important; max-height: 33px; margin-left: 5px;" border="0"></a>
+                          </td>
+                        </tr>
+                      </table>
+
+                    </td>
+
+                    <td>
+
+                      <table class="five columns hide-for-small" width="150" height="30" style="max-width: 200px !important;">
+                        <tr>
+                          <td class="twelve sub-grid">
+
+                            <table class="">
+                              <tr>
+                                <td class="one sub-columns" class="expander"></td>
+                                <td class="one sub-columns"><a href="https://www.facebook.com/pluralsight" target="_blank"><img src="http://ww2.pluralsight.com/l/36882/2014-08-06/vcv3/36882/32792/social_facebook.gif" vspace="20" width="25" height="23" style="width: 25px;" border="0"></a></td>
+                                <td class="one sub-columns"><a href="https://twitter.com/pluralsight" target="_blank"><img src="http://ww2.pluralsight.com/l/36882/2014-08-06/vcvk/36882/32806/social_twitter.gif" vspace="20" width="25" height="23" style="width: 25px;" border="0"></a></td>
+                                <td class="one sub-columns"><a href="https://www.youtube.com/user/pluralsight" target="_blank"><img src="http://ww2.pluralsight.com/l/36882/2014-08-06/vcvr/36882/32812/social_youtube.gif" vspace="20" width="25" height="23" style="width: 25px;" border="0"></a></td>
+                                <td class="one sub-columns"><a href="http://instagram.com/pluralsight" target="_blank"><img src="http://ww2.pluralsight.com/l/36882/2014-08-06/vcv9/36882/32798/social_instagram.gif" vspace="20" width="25" height="23" style="width: 25px;" border="0"></a></td>
+                                <td class="one sub-columns"><a href="https://www.linkedin.com/company/pluralsight" target="_blank"><img src="http://ww2.pluralsight.com/l/36882/2014-08-06/vcvf/36882/32802/social_linkedin.gif" vspace="20" width="25" height="23" style="width: 25px;" border="0"></a></td>
+                              </tr>
+                            </table>
+
+                          </td>
+                        </tr>
+                      </table>
+
+
+                    </td>
+                  </tr>
+                </table>
+
+              </center>
+            </td>
+
+          </tr>
+        </table>
+
+        <table class="hero-section" width="100%"  bgcolor="#ededee">
+          <tr>
+            <td>
+              <center>
+
+
+                <table class="container hero">
+                  <tr>
+                    <td class="text-pad-left">
+
+                      <table class="row">
+
+                        <tr>
+
+                          <td class="">
+
+                            <table class="twelve columns">
+                              <tr>
+                                <td class="header-text">
+
+                                  <h1><a href="<%= @mailing.hero_url %>?utm_source=<%= @mailing.utm_source %>&utm_medium=<%= @mailing.hero_utm_medium %>&utm_campaign=<%= @mailing.utm_campaign %>" style="color: #555658;"><span style="color:#555658;"><%= @mailing.hero_title %></span></a></h1>
+                                  <p><%= @mailing.hero_description %> <a href="<%= @mailing.hero_url %>?utm_source=<%= @mailing.utm_source %>&utm_medium=<%= @mailing.hero_utm_medium %>&utm_campaign=<%= @mailing.utm_campaign %>">Read more &raquo;</a></p>
+
+                                  <a href="<%= @mailing.hero_url %>?utm_source=<%= @mailing.utm_source %>&utm_medium=<%= @mailing.hero_utm_medium %>&utm_campaign=<%= @mailing.utm_campaign %>">
+                                    <img height="200" width="600" src="<%= @mailing.hero_image_url %>" alt="<%= @mailing.hero_title %>">
+                                  </a>
+
+                                </td>
+                                <td class="expander"></td>
+                              </tr>
+                            </table>
+
+                          </td>
+
+
+
+
+                        </tr>
+                      </table>
+
+                    </td>
+                  </tr>
+                </table>
+              </center>
+
+            </td>
+          </tr>
+        </table>
+
+
+        <table class="container courses">
+          <tr>
+            <td>
+
+              <table class="row">
+                <tr>
+                  <td class="wrapper last">
+
+                    <table class="twelve columns">
+                      <tr>
+                        <td class="twelve sub-columns">
+                          <h2>New courses</h2>
+                        </td>
+
+                      </tr>
+                    </table>
+
+                  </td>
+                </tr>
+              </table>
+
+            </td>
+          </tr>
+        </table>
+
+
+
+
+        <table class="container courses">
+          <tr>
+            <td class="">
+
+              <table class="block-grid two-up" width="600">
+                <tr>
+
+
+                  <td class="" style="margin-right: 40px;">
+                    <a href="<%= @mailing.course_one_url %>?utm_source=<%= @mailing.utm_source %>&utm_medium=<%= @mailing.course_utm_medium %>&utm_campaign=<%= @mailing.utm_campaign %>">
+                      <img height="217" width="270" src="<%= @mailing.course_one_image %>" alt="<%= @mailing.course_one_title %>">
+                    </a>
+
+                    <table width="300">
+                      <tr>
+                        <td class="description">
+                          <a href="<%= @mailing.course_one_url %>?utm_source=<%= @mailing.utm_source %>&utm_medium=<%= @mailing.course_utm_medium %>&utm_campaign=<%= @mailing.utm_campaign %>"><h3><%= @mailing.course_one_title %></h3></a>
+                          <h4>By <%= @mailing.course_one_author %></h4>
+                          <p><%= @mailing.course_one_description %></p>
+                        </td>
+                      </tr>
+                    </table>
+
+                  </td>
+
+
+                  <td class="" style="margin-right: 0;">
+                    <a href="<%= @mailing.course_two_url %>?utm_source=<%= @mailing.utm_source %>&utm_medium=blog&utm_campaign=<%= @mailing.utm_campaign %>">
+
+                      <img height="217" width="270" src="<%= @mailing.course_two_image %>" alt="<%= @mailing.course_two_title %>">
+                    </a>
+
+                    <table width="300">
+                      <tr>
+                        <td class="description">
+                          <a href="<%= @mailing.course_two_url %>?utm_source=<%= @mailing.utm_source %>&utm_medium=blog&utm_campaign=<%= @mailing.utm_campaign %>"><h3><%= @mailing.course_two_title %></h3></a>
+                          <h4>By <%= @mailing.course_two_author %></h4>
+                          <p><%= @mailing.course_two_description %></p>
+                        </td>
+                      </tr>
+                    </table>
+
+                  </td>
+
+                  <!-- Start a new Table Row after two items -->
+                </tr>
+                <tr>
+
+
+                  <td class="" style="margin-right: 40px;">
+                    <a href="<%= @mailing.course_three_url %>?utm_source=<%= @mailing.utm_source %>&utm_medium=<%= @mailing.course_utm_medium %>&utm_campaign=<%= @mailing.utm_campaign %>">
+                      <img height="217" width="270" src="<%= @mailing.course_three_image %>" alt="<%= @mailing.course_three_title %>">
+                    </a>
+
+                    <table width="300">
+                      <tr>
+                        <td class="description">
+                          <a href="<%= @mailing.course_three_url %>?utm_source=<%= @mailing.utm_source %>&utm_medium=<%= @mailing.course_utm_medium %>&utm_campaign=<%= @mailing.utm_campaign %>"><h3><%= @mailing.course_three_title %></h3></a>
+                          <h4>By <%= @mailing.course_three_author %></h4>
+                          <p><%= @mailing.course_three_description %></p>
+                        </td>
+                      </tr>
+                    </table>
+
+                  </td>
+
+
+                  <td class="" style="margin-right: 0;">
+                    <a href="<%= @mailing.course_four_url %>?utm_source=<%= @mailing.utm_source %>&utm_medium=<%= @mailing.course_utm_medium %>&utm_campaign=<%= @mailing.utm_campaign %>">
+
+                      <img height="217" width="270" src="<%= @mailing.course_four_image %>" alt="<%= @mailing.course_four_title %>">
+                    </a>
+
+                    <table width="300">
+                      <tr>
+                        <td class="description">
+                          <a href="<%= @mailing.course_four_url %>?utm_source=<%= @mailing.utm_source %>&utm_medium=<%= @mailing.course_utm_medium %>&utm_campaign=<%= @mailing.utm_campaign %>"><h3><%= @mailing.course_four_title %></h3></a>
+                          <h4>By <%= @mailing.course_four_author %></h4>
+                          <p><%= @mailing.course_four_description %></p>
+                        </td>
+                      </tr>
+                    </table>
+
+                  </td>
+
+                  <!-- Start a new Table Row after two items -->
+                </tr>
+                <tr>
+
+                  <td class="" style="margin-right: 40px;">
+                    <a href="<%= @mailing.course_five_url %>?utm_source=<%= @mailing.utm_source %>&utm_medium=<%= @mailing.course_utm_medium %>&utm_campaign=<%= @mailing.utm_campaign %>">
+                      <img height="217" width="270" src="<%= @mailing.course_five_image %>" alt="<%= @mailing.course_five_title %>">
+                    </a>
+
+                    <table width="300">
+                      <tr>
+                        <td class="description">
+                          <a href="<%= @mailing.course_five_url %>?utm_source=<%= @mailing.utm_source %>&utm_medium=<%= @mailing.course_utm_medium %>&utm_campaign=<%= @mailing.utm_campaign %>"><h3><%= @mailing.course_five_title %></h3></a>
+                          <h4>By <%= @mailing.course_five_author %></h4>
+                          <p><%= @mailing.course_five_description %></p>
+                        </td>
+                      </tr>
+                    </table>
+
+                  </td>
+
+
+                  <td class="" style="margin-right: 0;">
+                    <a href="<%= @mailing.course_six_url %>?utm_source=<%= @mailing.utm_source %>&utm_medium=dtcourse&utm_campaign=<%= @mailing.utm_campaign %>">
+
+                      <img height="217" width="270" src="<%= @mailing.course_six_image %>" alt="<%= @mailing.course_six_title %>">
+                    </a>
+
+                    <table width="300">
+                      <tr>
+                        <td class="description">
+                          <a href="<%= @mailing.course_six_url %>?utm_source=<%= @mailing.utm_source %>&utm_medium=dtcourse&utm_campaign=<%= @mailing.utm_campaign %>"><h3><%= @mailing.course_six_title %></h3></a>
+                          <h4>By <%= @mailing.course_six_author %></h4>
+                          <p><%= @mailing.course_six_description %></p>
+                        </td>
+                      </tr>
+                    </table>
+
+                  </td>
+
+                  <!-- Start a new Table Row after two items -->
+                </tr>
+
+
+
+
+              </table>
+
+
+            </td>
+          </tr>
+        </table>
+
+
+
+        <table class="content additional-courses"  width="100%"  bgcolor="#ededee">
+          <tr>
+            <td style="padding: 30px 0;" align="">
+              <center>
+
+                <table class="container">
+                  <tr>
+                    <td>
+
+
+                      <table>
+                        <tr>
+                          <td class="text-pad-left">
+
+                            <h2>All new courses</h2>
+
+                            <p>
+                            <a href="<%= @mailing.popular_url_one %>?utm_source=email&utm_medium=course&utm_campaign=Newsletter_14_1210"><%= @mailing.popular_one %></a><br />
+                            <a href="<%= @mailing.popular_url_two %>?utm_source=email&utm_medium=course&utm_campaign=Newsletter_14_1210"><%= @mailing.popular_two %></a><br />
+                            <a href="<%= @mailing.popular_url_three %>?utm_source=email&utm_medium=course&utm_campaign=Newsletter_14_1210"><%= @mailing.popular_three %></a><br />
+                            <a href="<%= @mailing.popular_url_four %>?utm_source=email&utm_medium=course&utm_campaign=Newsletter_14_1210"><%= @mailing.popular_four %></a>
+                            </p>
+
+                          </td>
+                        </tr>
+                      </table>
+
+
+                      <table>
+                        <tr>
+                          <td class="text-pad-left">
+
+                            <h2>Upcoming courses</h2>
+
+                            <p><%= @mailing.upcoming_one %><br />
+                            <%= @mailing.upcoming_two %><br />
+                            <%= @mailing.upcoming_three %><br />
+                            <%= @mailing.upcoming_four %>
+                            </p>
+
+                          </td>
+                        </tr>
+                      </table>
+
+
+
+
+                    </td>
+                  </tr>
+                </table>
+              </center>
+
+
+            </td>
+          </tr>
+        </table>
+
+
+        <table class="row content">
+          <tr>
+            <td class="wrapper last">
+            <center>
+              <table class="twelve columns">
+                <tr>
+
+                  <td style="padding: 30px 0;" class="">
+
+                    <a href="http://smarterer.com/challenge/tech-pro?utm_source=email&utm_medium=techprochallenge&utm_campaign=Monthly_Newsletter_14_1203"><img src="http://pluralsight-assets.s3.amazonaws.com/newsletter/images/smarterer-logo.gif" alt="Monthly Tip" width="100" align="left" hspace="20" style="margin: 0 20px 0px 0"></a>
+
+                    <h2 style="margin-bottom: 0px;">Smarterer Update</h2>
+                    <p style=""><strong>A Smarterer way to assess:</strong> Put your tech skills to the test with these assessments from our newly acquired partner, Smarterer. Take part in the #TechProChallenge now!</p>
+
+                  </td>
+
+                </tr>
+              </table>
+            </center>
+            </td>
+          </tr>
+        </table>
+
+
+        <!-- Footer Again-->
+        <table class="container">
+          <tr>
+            <td style="padding: 20px 0 40px 0;">
+
+
+              <table class="row"> <!-- Container restricts the content width -->
+                <tr>
+                  <td class="wrapper"> <!-- Wrapper stays on the inner table -->
+
+                    <table class="six columns">
+                      <tr>
+                        <td class="unsubscribe text-pad-left">
+                          <a href="%%email_preference_center%%">Manage email preferences</a><br />
+                          182 N. Union Ave. Farmington, UT 84025
+                        </td>
+                      </tr>
+                    </table>
+
+
+                  </td>
+                  <td class="wrapper last">
+
+                    <table class="six columns">
+                      <tr>
+                        <td>
+
+
+                          <table align="right" class="social">
+                            <tr>
+
+                              <td>
+                                <span><a href="https://www.facebook.com/pluralsight" target="_blank"><img src="http://bit.ly/1qf1AvD" vspace="0" hspace="5" width="25" height="23" style="width: 25px;" border="0"></a></span>
+                                <!-- Facebook -->
+                              </td>
+
+                              <td>
+                                <span><a href="https://twitter.com/pluralsight" target="_blank"><img src="http://bit.ly/1BTGLep" vspace="0" hspace="5" width="25" height="23" style="width: 25px;" border="0"></a></span>
+                                <!-- Twitter -->
+                              </td>
+
+                              <td>
+                                <span><a href="https://www.youtube.com/user/pluralsight" target="_blank"><img src="http://bit.ly/1l7joc7" vspace="0" hspace="5" width="25" height="23" style="width: 25px;" border="0"></a></span>
+                                <!-- YouTube -->
+                              </td>
+                              <td>
+                                <span><a href="http://instagram.com/pluralsight" target="_blank"><img src="http://bit.ly/1qf1BQh" vspace="0" hspace="5" height="23" width="25" style="width: 25px;" border="0"></a></span>
+                                <!-- Instagram -->
+                              </td>
+
+                              <td>
+                                <span><a href="https://www.linkedin.com/company/pluralsight" target="_blank"><img src="http://bit.ly/1nst1O5" vspace="0" hspace="5" width="25" height="23" style="width: 25px;" border="0"></a></span>
+                                <!-- LinkedIn -->
+                              </td>
+                              <td class="expander"></td>
+                            </tr>
+                          </table>
+
+                        </td>
+                      </tr>
+                    </table>
+
+
+
+
+                  </td>
+                </tr>
+              </table>
+
+
+              <table class="row"> <!-- Container restricts the content width -->
+                <tr>
+                  <td class="wrapper"> <!-- Wrapper stays on the inner table -->
+
+                    <table class="eight columns">
+                      <tr>
+                        <td class="copyright text-pad-left">
+
+                          Copyright &copy; 2014 Pluralsight LLC.<br />
+                          All logos and trademarks are the properties of their respective owners.
+
+
+                        </td>
+                      </tr>
+                    </table>
+
+
+                  </td>
+                  <td class="wrapper last">
+                    <table class="four columns">
+                      <tr>
+                        <td>
+
+                          <div class="date" width="0%">November 2014</div>
+                          <div class="web-version"><a href="%%view_online%%">View web version</a></div>
+
+                        </td>
+                      </tr>
+                    </table>
+
+
+
+                  </td>
+                </tr>
+              </table>
+
+
+            </td>
+          </tr>
+        </table>
+
+
+      </center>
+    </td>
+  </tr>
+</table>
+
+</body>
+</html>

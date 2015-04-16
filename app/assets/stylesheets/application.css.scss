@@ -1,0 +1,177 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ * NOTE: Because of weekly-newsletter.css.scss, all stylesheets must be manually added here.
+ *
+ *= require scaffolds
+ *= require jquery.fileupload-ui
+ *= require_self
+ */
+
+@import 'ps-color-scheme-variables';
+
+// Flexbox
+body {
+  display: flex;
+  flex-flow: row nowrap;
+}
+nav#sidenav {
+  flex-basis: 64px;
+  order: 1;
+  flex-shrink: 0;
+}
+nav#subnav {
+  flex-basis: 144px;
+  order: 2;
+  flex-shrink: 0;
+}
+#content {
+  flex-basis: auto;
+  flex: 1 100%;
+  order: 3;
+  position: relative;
+}
+
+// Other Directives
+body {
+  font-family: "Open Sans", verdana, arial, helvetica, sans-serif;
+  margin: 0;
+  background-color: $lightest-grey;
+}
+
+h1 {
+  font-weight: normal;
+  font-size: 20px;
+}
+
+p, ol, ul, td, a {
+  font-family: "Open Sans", verdana, arial, helvetica, sans-serif;
+  font-size: 14px;
+}
+
+nav#sidenav {
+  background-color: $darkest-grey;
+  max-height: 100%;
+  min-height: 100vh;
+
+  img#logo {
+    width: 64px;
+    height: 64px;
+    background-color: $dark-orange;
+    display: block;
+    margin-bottom: 38px;
+  }
+
+  .ss-icon {
+    display: block;
+    color: $lightest-grey;
+    font-size: 32px;
+    text-align: center;
+    height: 64px;
+
+    &:hover {
+      background-color: transparent;
+      color: $lightest-blue;
+    }
+  }
+  .inactive, .inactive:hover {
+    color: $darker-grey;
+  }
+
+}
+
+nav#subnav {
+  background-color: $darker-grey;
+  padding-top: 26px;
+  max-height: 100%;
+  min-height: 100vh;
+
+
+  h1 {
+    color: $lightest-grey;
+    padding-left: 14px;
+  }
+
+  a {
+    display: block;
+    color: $light-grey;
+    text-decoration: none;
+    padding-left: 14px;
+    line-height: 2em;
+
+    &:hover {
+      color: $dark-blue;
+      background-color: $lightest-grey;
+    }
+  }
+
+}
+
+#content {
+  margin-left: 0;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 30px;
+  min-width: 490px;
+
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+table tr th {
+  text-align: left;
+}
+
+tr.odd {
+  background-color: white;
+}
+
+th, td {
+  padding: 3px 6px;
+}
+
+// Flash messages
+
+
+#flash {
+  position: absolute;
+  top: 7px;
+}
+
+.notice, .alert {
+  border-radius: 2px;
+  padding: 9px 12px 1px;
+  margin-bottom: 5px;
+
+  .ss-icon {
+    font-size: 1.5em;
+    display: block;
+    float: left;
+    color: $lightest-grey;
+  }
+  p {
+    padding-left: 2.5em;
+    margin-top: 0.2em;
+    color: $lightest-grey;
+  }
+}
+
+.notice {
+  background-color: $dark-green;
+}
+.alert {
+  background-color: $error-red;
+}
+

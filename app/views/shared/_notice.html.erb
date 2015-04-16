@@ -1,0 +1,8 @@
+<div id="flash">
+  <% flash.each do |name, msg| -%>
+    <div class="<%= name %>">
+      <span class="ss-icon"><% if (name == "alert") %>pig<% else %>bird<% end %></span>
+      <p><%= msg %></p>
+    </div>
+  <% end -%>
+</div>
